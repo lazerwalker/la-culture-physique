@@ -6,14 +6,16 @@ img.bg {
 
 img.leg {
   transition: 0.5s ease-in;
-  transform-origin: 10% center;
+  transform-origin: left top;
 }
 
 img.leg.up {
   transform: rotate(-45deg);
-  left: 171px;
+  left: 158px;
+  /*left: 171px;*/
   position: absolute;
-  top: 399px;
+  top: 420px;
+  /*top: 399px;*/
 }
 
 img.leg.down {
