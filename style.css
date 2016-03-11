@@ -16,7 +16,7 @@ img.leg.up {
   top: 399px;
 }
 
-img.leg:hover, img.leg.down {
+img.leg.down {
   /*left: 160px;*/
   /*left: 147px;*/
   left: 171px;
