@@ -74,6 +74,37 @@ h2 {
   display: none;
 }
 
+#end p {
+  font-size: 30px;
+  line-height: 1em;
+  font-weight: bold;
+}
+
+#end h2 {
+  margin-top: 160px;
+}
+
+#end img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+}
+
+#end .bien {
+  margin-top: 140px;
+  margin-bottom: 150px;
+}
+
+#end .num {
+  color: #D99;
+  font-family: Cochin;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1em;
+  margin: 0;
+}
+
 #title {
   margin-top: -60px;
 }

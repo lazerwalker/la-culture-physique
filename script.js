@@ -59,6 +59,7 @@ $(document).on('touchend mouseup keyup', '#title', function(e) {
   var songLength = (2*60 + 37) * 1000 + 500 // includes wiggle-room
   setTimeout(function() {
     $("#game").fadeOut(1000, function() {
+      $("#end .num").text(count)
       $("#end").fadeIn(1000)
     })
   }, songLength)
