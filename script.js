@@ -45,10 +45,16 @@ function endTap(e) {
 $(document).on('touchstart mousedown keydown', startTap);
 $(document).on('touchend mouseup keyup', endTap);
 
-$(document).one('touchend mouseup keyup', function(e) {
+$(document).on('touchend mouseup keyup', '#title', function(e) {
   if (e.type === "keyup" && e.keyCode !== 32) { return }
   $("#title").fadeOut(function() {
-    $("#game").fadeIn();    
+    $("#poem").fadeIn();    
   });
 })
 
+$(document).on('touchend mouseup keyup', '#poem', function(e) {
+  if (e.type === "keyup" && e.keyCode !== 32) { return }
+  $("#poem").fadeOut(function() {
+    $("#game").fadeIn();    
+  });
+})

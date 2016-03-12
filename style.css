@@ -5,6 +5,7 @@
 
 body {
   background-color: #EEE;
+  color: #555;
   font-family: Zapfino;
   height: 100%;
   user-select: none;
@@ -17,10 +18,17 @@ h2 {
   margin: 0;
 }
 
+#poem {
+  display: none;
+}
+#poem p {
+  font-family: Cochin;
+}
+
 #wrapper {
-  max-width: 541px;
+/*  max-width: 541px;
   margin: auto;
-  position: relative;
+  position: relative;*/
 }
 
 #game {
