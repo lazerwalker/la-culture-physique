@@ -45,10 +45,24 @@ function endTap(e) {
 $(document).on('touchstart mousedown keydown', startTap);
 $(document).on('touchend mouseup keyup', endTap);
 
+$(document).on('touchend mouseup keyup', '#end', function(e) {
+  $("#end").fadeOut(1000, function() {
+    $("#title").fadeIn(1000)
+  })
+});
+
 $(document).on('touchend mouseup keyup', '#title', function(e) {
   if (e.type === "keyup" && e.keyCode !== 32) { return }
   // Kill me
   window.location = "ipc://playsong"
+
+  var songLength = (2*60 + 37) * 1000 + 500 // includes wiggle-room
+  setTimeout(function() {
+    $("#game").fadeOut(1000, function() {
+      $("#end").fadeIn(1000)
+    })
+  }, songLength)
+
   $("#title").fadeOut(1000, function() {
     $("#intro").fadeIn(1000, function() {
       setTimeout(function() {
