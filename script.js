@@ -55,6 +55,13 @@ $(document).on('touchend mouseup keyup', '#title', function(e) {
 $(document).on('touchend mouseup keyup', '#poem', function(e) {
   if (e.type === "keyup" && e.keyCode !== 32) { return }
   $("#poem").fadeOut(function() {
+    $("#intro").fadeIn();    
+  });
+})
+
+$(document).on('touchend mouseup keyup', '#intro', function(e) {
+  if (e.type === "keyup" && e.keyCode !== 32) { return }
+  $("#intro").fadeOut(function() {
     $("#game").fadeIn();    
   });
 })
