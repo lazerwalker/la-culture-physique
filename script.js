@@ -48,13 +48,6 @@ $(document).on('touchend mouseup keyup', endTap);
 $(document).on('touchend mouseup keyup', '#title', function(e) {
   if (e.type === "keyup" && e.keyCode !== 32) { return }
   $("#title").fadeOut(function() {
-    $("#poem").fadeIn();    
-  });
-})
-
-$(document).on('touchend mouseup keyup', '#poem', function(e) {
-  if (e.type === "keyup" && e.keyCode !== 32) { return }
-  $("#poem").fadeOut(function() {
     $("#intro").fadeIn();    
   });
 })

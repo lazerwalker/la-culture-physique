@@ -50,12 +50,15 @@ h2 {
 #intro .english-quote {
   /*font-style: italic;*/
   font-family: Cochin;
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 1.3em;
+  margin-bottom: 1em;
+  margin-right: 30px;
 }
 
 #intro .attribution {
-  font-size: 0.7em;
+  margin-top: 40px;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
