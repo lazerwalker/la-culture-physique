@@ -4,11 +4,44 @@
 }
 
 body {
+  background-color: #EEE;
+  font-family: Zapfino;
   height: 100%;
   user-select: none;
   width: 100%;
 }
 
+h2 {
+  font-style: italic;
+  font-weight: bold;
+  margin: 0;
+}
+
+#wrapper {
+  max-width: 541px;
+  margin: auto;
+  position: relative;
+}
+
+#game {
+  display: none;
+}
+
+#game .img {
+  width: 541px;
+}
+
+#title {
+  margin-top: 60px;
+}
+
+.english {
+  font-family: Cochin;
+  font-variant: small-caps;
+  font-weight: bold;
+
+  margin: 0;
+}
 img.bg {
   left: 0;
   position: absolute;

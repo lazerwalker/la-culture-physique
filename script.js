@@ -45,3 +45,10 @@ function endTap(e) {
 $(document).on('touchstart mousedown keydown', startTap);
 $(document).on('touchend mouseup keyup', endTap);
 
+$(document).one('touchend mouseup keyup', function(e) {
+  if (e.type === "keyup" && e.keyCode !== 32) { return }
+  $("#title").fadeOut(function() {
+    $("#game").fadeIn();    
+  });
+})
+
