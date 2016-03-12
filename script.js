@@ -47,14 +47,15 @@ $(document).on('touchend mouseup keyup', endTap);
 
 $(document).on('touchend mouseup keyup', '#title', function(e) {
   if (e.type === "keyup" && e.keyCode !== 32) { return }
-  $("#title").fadeOut(function() {
-    $("#intro").fadeIn();    
-  });
-})
-
-$(document).on('touchend mouseup keyup', '#intro', function(e) {
-  if (e.type === "keyup" && e.keyCode !== 32) { return }
-  $("#intro").fadeOut(function() {
-    $("#game").fadeIn();    
+  // Kill me
+  window.location = "ipc://playsong"
+  $("#title").fadeOut(1000, function() {
+    $("#intro").fadeIn(1000, function() {
+      setTimeout(function() {
+        $("#intro").fadeOut(1500, function() {
+          $("#game").fadeIn(1700)
+        })
+      }, 7700);
+    });    
   });
 })

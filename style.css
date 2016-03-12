@@ -70,7 +70,13 @@ h2 {
   width: 541px;
 }
 
-#title {}
+#title {
+  margin-top: -60px;
+}
+
+#title img {
+  margin-bottom: 40px;
+}
 
 .english {
   font-family: Cochin;
