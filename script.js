@@ -1,5 +1,5 @@
 var bottomTimeout, topTimeout;
-var reachedBotton = false;
+var reachedBottom = false;
 var reachedTop = false;
 var count = 0;
 
@@ -13,21 +13,21 @@ checkState = function() {
   }
 }
 
-
-$(document).on('touchstart mousedown keydown', function(e) {
+function startTap(e) {
   if(e.type === "keydown" && e.keyCode !== 32) {
     return;
   }
-  $(".leg").addClass('down');
+  $(".leg").addClass('up');
+  $(".leg").removeClass('down');
 
   // TODO: Try to listen for CSS animation end
   clearTimeout(topTimeout)
   bottomTimeout = setTimeout(function() {
     reachedBottom = true;
-  }, 500)
-})
+  }, 400)
+}
 
-$(document).on('touchend mouseup keyup', function(e) {
+function endTap(e) {
   if(e.type === "keyup" && e.keyCode !== 32) {
     return;
   }
@@ -36,8 +36,12 @@ $(document).on('touchend mouseup keyup', function(e) {
   topTimeout = setTimeout(function() {
     reachedTop = true;
     checkState();
-  }, 500)
+  }, 400)
 
-  $(".leg").removeClass('down');
-})
+  $(".leg").removeClass('up');
+  $(".leg").addClass('down');
+}
+
+$(document).on('touchstart mousedown keydown', startTap);
+$(document).on('touchend mouseup keyup', endTap);
 
