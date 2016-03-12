@@ -149,3 +149,12 @@ img.leg.down {
   top: 415px;
   transform: rotate(-2deg);
 }
+
+#game .msg {
+  color: #333;
+  font-weight: bold;
+  font-size: 30px;
+  position: absolute;
+  max-width: 500px;
+  text-shadow: #FFF 0 0 7px;
+}
