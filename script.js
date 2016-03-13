@@ -98,6 +98,9 @@ function startPlayingMessages() {
   setTimeout(iter, 1000)
 }
 
+// Stops scrolling
+$(document).on('touchmove', function(e) { e.preventDefault() });
+
 $(document).on('touchstart mousedown keydown', startTap);
 $(document).on('touchend mouseup keyup', endTap);
 
