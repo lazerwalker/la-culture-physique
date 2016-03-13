@@ -29,7 +29,7 @@ h2 {
 }
 
 #poem p {
-  font-family: Cochin;
+  font-family: Cochin, serif;
 }
 
 #intro {
@@ -50,7 +50,7 @@ h2 {
 
 #intro .english-quote {
   /*font-style: italic;*/
-  font-family: Cochin;
+  font-family: Cochin, serif;
   font-size: 1.3em;
   line-height: 1.3em;
   margin-bottom: 1em;
@@ -106,7 +106,7 @@ h2 {
 
 #end .num {
   color: #D99;
-  font-family: Cochin;
+  font-family: Cochin, serif;
   font-weight: bold;
   font-size: 40px;
   line-height: 1em;
@@ -122,7 +122,7 @@ h2 {
 }
 
 .english {
-  font-family: Cochin;
+  font-family: Cochin, serif;
   font-variant: small-caps;
   font-weight: bold;
 
