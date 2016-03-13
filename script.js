@@ -87,12 +87,11 @@ function startPlayingMessages() {
       messages = _(messages).without(msg)
 
       setTimeout(function() {
-        $("#game .msg").fadeOut(100)
-        setTimeout(iter, 500)
-      }, 1300)
+        $("#game .msg").fadeOut(1000)
+        setTimeout(iter, 5000)
+      }, 3000)
     } else {
-      console.log("Didn't make it")
-      setTimeout(iter, 100)
+      setTimeout(iter, 1000)
     }
   }
 
