@@ -110,6 +110,13 @@ $(document).on('touchend mouseup keyup', '#end', function(e) {
   })
 });
 
+function gameEnd() {
+  $("#game").fadeOut(1000, function() {
+    $("#end .num").text(count)
+    $("#end").fadeIn(1000)
+  })
+}
+
 $(document).on('touchend mouseup keyup', '#title', function(e) {
   if (e.type === "keyup" && e.keyCode !== 32) { return }
   var audio = document.getElementById('song')
@@ -122,13 +129,8 @@ $(document).on('touchend mouseup keyup', '#title', function(e) {
       })
     }, 9000);
   })
+  audio.addEventListener('ended', gameEnd)
 
-  audio.addEventListener('ended', function() {
-    $("#game").fadeOut(1000, function() {
-      $("#end .num").text(count)
-      $("#end").fadeIn(1000)
-    })
-  })
 
   $("#title").fadeOut(1000, function() {
     $("#intro").fadeIn(1000);
