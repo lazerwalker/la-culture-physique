@@ -110,24 +110,25 @@ $(document).on('touchend mouseup keyup', '#end', function(e) {
 
 $(document).on('touchend mouseup keyup', '#title', function(e) {
   if (e.type === "keyup" && e.keyCode !== 32) { return }
-  // Kill me
-  window.location = "ipc://playsong"
+  var audio = document.getElementById('song')
+  audio.play()
+  audio.addEventListener('playing', function() {
+    setTimeout(function() {
+      $("#intro").fadeOut(1500, function() {
+        $("#game").fadeIn(1700)
+        setTimeout(function() { startPlayingMessages() }, 6000)
+      })
+    }, 9000);
+  })
 
-  var songLength = (2*60 + 37) * 1000 + 500 // includes wiggle-room
-  setTimeout(function() {
+  audio.addEventListener('ended', function() {
     $("#game").fadeOut(1000, function() {
       $("#end .num").text(count)
       $("#end").fadeIn(1000)
     })
-  }, songLength)
+  })
 
   $("#title").fadeOut(1000, function() {
-    $("#intro").fadeIn(1000, function() {
-      setTimeout(function() {
-        $("#intro").fadeOut(1500, function() {
-          $("#game").fadeIn(1700)
-        })
-      }, 7700);
-    });    
+    $("#intro").fadeIn(1000);
   });
 })
