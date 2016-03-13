@@ -1,4 +1,4 @@
-# La Culture Physique de la Femme Elegante
+# La Culture Physique de la Femme Elégante
 
 This is a bizarre little interactive experience made for [Train Jam 2016](http://trainjam.com), inspired by and using [these lovely images](http://www.slate.com/blogs/the_vault/2016/02/08/exercise_advice_for_1920s_flappers_living_in_france_in_a_set_of_12_illustrations.html).
 
